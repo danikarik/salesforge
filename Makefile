@@ -20,3 +20,7 @@ migrate:
 	@echo "Applying test migrations..."
 	goose up
 	GOOSE_DBSTRING=$(TEST_DATABASE_URL) goose up
+
+test:
+	@echo "Running tests..."
+	go test ./...
