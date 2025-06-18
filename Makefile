@@ -19,4 +19,4 @@ drop-db:
 migrate:
 	@echo "Applying test migrations..."
 	goose up
-	GOOSE_DBSTRING=$(TEST_GOOSE_DBSTRING) goose up
+	GOOSE_DBSTRING=$(TEST_DATABASE_URL) goose up

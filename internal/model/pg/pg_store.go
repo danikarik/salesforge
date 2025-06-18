@@ -133,6 +133,7 @@ func (s *PGStore) FetchSequence(ctx context.Context, id uint64) (*model.Sequence
 		).
 		Where(sq.Eq{"sequence_id": id}).
 		From("steps").
+		OrderBy("id ASC").
 		ToSql()
 	if err != nil {
 		return nil, err
